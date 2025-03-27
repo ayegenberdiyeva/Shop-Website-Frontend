@@ -1,0 +1,63 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+  
+    .brand-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  
+      .brand-logo {
+        width: 100px;
+        height: auto;
+      }
+    }
+
+    .categories-list {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+      margin: 20px;
+      justify-content: center;
+    
+      .category {
+        .category-selector {
+          background: #f8f9fa;
+          border: 2px solid #007bff;
+          color: #007bff;
+          padding: 8px 15px;
+          border-radius: 5px;
+          font-size: 14px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+    
+          &:hover {
+            background: #007bff;
+            color: #fff;
+          }
+    
+          &.active {
+            background: #0056b3;
+            color: white;
+            border-color: #0056b3;
+          }
+        }
+      }
+    }
+  
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+    }
+  }
+  
+  

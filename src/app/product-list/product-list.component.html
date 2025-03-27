@@ -1,0 +1,16 @@
+<ul>
+    <div *ngIf="productsList && productsList.length > 0; else noProducts">   
+        <li class='product-list-item' *ngFor="let product of productsList">
+            <app-product-item
+            [product]="product"
+            [isAllProductsSelected]="isAllProductsSelected"
+            (remove)="onRemove($event)"
+            (like)="onLike($event)"
+            ></app-product-item>
+        </li>
+    </div>
+
+    <ng-template #noProducts>
+        <li class="no-products">No products found</li>
+    </ng-template>
+</ul>

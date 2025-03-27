@@ -1,0 +1,22 @@
+<section class='listing'>
+    <img [src]="product.imageUrl" [alt]="product.name" class='product-image'>
+    <div class="product-info">
+        <div class="info">
+            <h2 class="listing-heading">{{ product.name }}</h2>
+            <div class='listing-details'>
+                <p class="listing-description">{{ product.description }}</p>
+                <p class="listing-price">⭐️ {{ product.rating }}</p>
+            </div>
+
+            <div class="rating-bar">
+                <div class="rating-fill" [style.width.%]='(product.rating ?? 0) / 5 * 100'></div>
+            </div>
+           
+        </div>
+        <div class='buttons'>
+            <a [href]="product.link">Learn More</a>
+            <button class="share-button telegram" (click)="shareOn('telegram', product.link!)">Telegram</button>
+            <button class="share-button whatsapps" (click)="shareOn('whatsapp', product.link!)">WhatsApp</button>
+        </div>
+    </div>
+</section>
